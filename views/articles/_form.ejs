@@ -1,0 +1,31 @@
+<div class="form-group">
+    <label for="title">Title</label>
+    <input required value="<%= article.title%>" type="text" name="title" id="title" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="title">Description</label>
+    <textarea required name="description" id="description" cols="30" rows="3" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+    <label for="title">Body</label>
+    <textarea required name="body" id="body" cols="30" rows="6" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+    <label for="title">Image</label>
+    <input required value="<%= article.image%>" type="text" name="image" id="image" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="title">Keywords</label>
+    <input value="<%= article.keywords%>" type="text" name="keywords" id="keywords" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="title">Citations</label>
+    <textarea name="citations" id="citations" cols="30" rows="3" class="form-control"></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary mt-4 mb-4">Publish</button>
