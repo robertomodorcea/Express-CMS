@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  
+    <title><%= article.id%></title>
+</head>
+<body>
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-5">
+            <a href="/" class="btn btn-secondary">All Articles</a>
+            <a href="edit/<%= article.id %> " class="btn btn-info">Edit</a>
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="<%= article.image %>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bolder lh-1 mb-3"><%= article.title%></h1>
+                <p class="lead fw-normal"><%= article.description %></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                </div>
+              </div>
+            </div>
+            <p class="lead">
+            <%= article.body %>
+            </p>
+          </div>
+          
+    </div>
+</body>
+</html>

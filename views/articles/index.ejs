@@ -20,8 +20,10 @@
                 <h1 class="display-5 fw-bold lh-1 mb-3"><%= articles[0].title%></h1>
                 <p class="lead"><%= articles[0].description %></p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Open</button>
-                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">Edit</button>
+                  <a href="articles/<%= articles[0].id %> " class="btn btn-primary btn-lg px-4 me-md-2">Open</a>
+                  <form action="/articles/<%= articles[0].id%>?_method=DELETE" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-danger btn-lg px-4 me-md-2">Delete</button>
+                  </form> 
                 </div>
               </div>
             </div>
@@ -36,15 +38,15 @@
                             <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><%= element.title %></h3>
                             <ul class="d-flex list-unstyled mt-auto">
                               <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                                <small><%= element.date.toLocaleDateString()  %> </small>
                               </li>
                               <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                                <small>Earth</small>
+                                <a href="articles/<%= element.id  %> " class="btn btn-primary">Show</a>
                               </li>
                               <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                                <small>3d</small>
+                                <form action="/articles/<%= element.id%>?_method=DELETE" method="post" class="d-inline">
+                                  <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                               </li>
                             </ul>
                           </div>
